@@ -1,0 +1,57 @@
+#badge
+  background cornsilk
+
+  badge-outer-rim = #bda54c
+  badge-rim = #ffe209
+  badge-inner = #fff900
+
+  shade(alpha)
+    rgba(0,0,0,alpha)
+
+  div
+    width 200px
+    height 200px
+    margin-left -(@width/2)
+    margin-top -140px
+
+    background-image radial-gradient(circle, badge-inner 59%, transparent 62%),
+                     radial-gradient(circle, badge-rim 67%, transparent 68%),
+                     radial-gradient(circle, badge-outer-rim 86%, transparent 87%)
+
+    border-radius 50%
+    box-shadow 6px 6px 10px shade(.3)
+
+    &:before
+      z-index -1
+      width 140px
+      height 120px
+      top 140px
+      left 33px
+
+      background-image repeating-linear-gradient( to right,
+                                                  green,
+                                                  green 20px,
+                                                  red 20px,
+                                                  red 40px )
+
+      box-shadow 4px 4px 10px shade(.2)
+
+
+    &:after
+      width 150px
+      height 150px
+      top 83px
+      left: 12%
+
+      number-color = darken(badge-rim, 7%)
+      number-shadow = alpha(darken(badge-rim, 70%),.3)
+      number-highlight = alpha(lighten(badge-inner, 70%),.7)
+
+      content '1'
+      font-weight bold
+      font-family Verdana, Helvetica, sans-serif
+      font-size 155px
+      letter-spacing 5px
+      line-height 18px
+      color number-color
+      text-shadow 2px 2px 3px number-shadow, -2px -2px 1px number-highlight

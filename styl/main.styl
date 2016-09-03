@@ -1,0 +1,17 @@
+.entry
+  text-align center
+  min-height 400px
+  position relative
+  z-index 1
+
+  div
+    position absolute
+    left 50%
+    top 50%
+
+    &:before, &:after
+      display block
+      content ''
+      position absolute
+
+@import 'badge'

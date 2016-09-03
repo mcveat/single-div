@@ -1,0 +1,52 @@
+.entry {
+  text-align: center;
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
+}
+.entry div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry div:before,
+.entry div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#badge {
+  background: #fff8dc;
+}
+#badge div {
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -140px;
+  background-image: radial-gradient(circle, #fff900 59%, transparent 62%), radial-gradient(circle, #ffe209 67%, transparent 68%), radial-gradient(circle, #bda54c 86%, transparent 87%);
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px rgba(0,0,0,0.3);
+}
+#badge div:before {
+  z-index: -1;
+  width: 140px;
+  height: 120px;
+  top: 140px;
+  left: 33px;
+  background-image: repeating-linear-gradient(to right, #008000, #008000 20px, #f00 20px, #f00 40px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+#badge div:after {
+  width: 150px;
+  height: 150px;
+  top: 83px;
+  left: 12%;
+  content: '1';
+  font-weight: bold;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 155px;
+  letter-spacing: 5px;
+  line-height: 18px;
+  color: #f6d900;
+  text-shadow: 2px 2px 3px rgba(79,70,0,0.3), -2px -2px 1px rgba(255,253,179,0.7);
+}
